@@ -1,0 +1,68 @@
+*, 
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background-color: #ede9db;
+}
+.demo-wrapper {
+	width: 600px;
+	margin: 120px auto 0;
+	text-align: center;
+}
+.demo-wrapper h3 {
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+.demo-wrapper section {
+	margin-bottom: 20px;
+	padding: 15px 0;
+}
+.demo-wrapper .circle {
+	width: 120px;
+	height: 120px;
+	border: 6px solid #d2c9bc;
+	border-radius: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	background-color: #fff;
+}
+
+@-webkit-keyframes circle {
+    from { 
+    	-webkit-transform: rotate(90deg); 
+    	transform: rotate(90deg);
+    }
+    to { 
+    	-webkit-transform: rotate(450deg); 
+    	transform: rotate(450deg);
+    }
+}
+@keyframes circle {
+    from { 
+    	-webkit-transform: rotate(90deg); 
+    	transform: rotate(90deg);
+    }
+    to { 
+    	-webkit-transform: rotate(450deg); 
+    	transform: rotate(450deg);
+    }
+}
+.demo-wrapper .second {
+	height: 2px;
+	position: absolute;
+	margin-top: -1px;
+	top: 50%;
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	width: 50%;
+	background-color: #e45341;
+	-webkit-animation: circle 60s steps(60) infinite;
+	animation: circle 60s steps(60) infinite;
+}
+.demo-wrapper .without-step .second {
+	-webkit-animation: circle 60s linear infinite;
+	animation: circle 60s linear infinite;
+}
